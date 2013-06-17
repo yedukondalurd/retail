@@ -1,0 +1,159 @@
+/* 
+    Document   : style
+    Created on : Jun 6, 2013, 11:09:48 PM
+    Author     : kondalu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url('../images/login_bg.png');
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+h1,h2,h3{
+    margin: 0px;
+    padding: 0px;
+}
+#retail{
+    margin: 0 auto;
+    width: 1000px;
+    border: 5px solid blue;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+#retail #header{
+    border-bottom: 2px solid #cccccc;
+    height: 60px;
+}
+#retail #header #store_logo{
+    float: left;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#retail #header #main_nav{
+    float: right;
+    width: 800px;
+    margin-top: 10px;
+}
+#retail #header #main_nav ul li{
+    float: left;
+    list-style: none;
+    width: 90px;
+    background: url('../images/login_bg.png');
+    border: 1px solid #cccccc;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: none;
+    height: 50px;
+    text-align: center;
+}
+#retail #header #main_nav ul li a {
+    display: inline-block;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+    color: #551A8B;
+}
+#retail #header #main_nav ul li a:hover {
+    text-decoration: underline;
+}
+/* Container styles*/
+#retail #container{
+    overflow: hidden;
+    /*    height: 500px;*/
+    margin: 10px;
+    border: 1px solid #cccccc;
+}
+#retail #container #heading{
+    height: 30px;
+    border-bottom: 1px solid #cccccc;
+}
+#retail #container #heading h3{
+    margin-left: 5px;
+    padding-top: 5px;
+}
+#retail #container #left_menu{
+    width: 185px;
+    float: left;
+    height: 100%;
+
+    border-right: 1px solid #cccccc;
+}
+#retail #container #left_menu ul{
+    margin-left: 5px;
+}
+
+#retail #container #left_menu ul li a{
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#retail #container #left_menu ul li a:hover{
+    text-decoration: underline;
+}
+#retail #container #list_container{
+    float: left;
+    width: 792px;
+}
+#generate_list th{
+    text-align: left;
+    padding-right: 0px;
+}
+
+/* End of Container styles*/
+/* Modal Box styles*/
+
+#myModal h2{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#myModal label{
+    font-size: 17px;
+    display: inline-block;
+    width: 115px;
+}
+#myModal label.error{
+    width: 100%;
+    color: red;
+    margin-left: 120px;
+}
+#myModal input[type=text]{
+    height: 25px;
+    width: 185px;
+}
+#myModal form{
+    margin-left: 15px;
+}
+#myModal form > div{
+    margin-bottom: 15px;
+}
+#myModal > div{
+    height: 400px;
+    width: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+textarea{
+    vertical-align: top;
+}
+.editEnqBtn{
+    margin-right: 10px
+}
+.noty_text{
+    font-size: 20px;
+}
+/* End of Modal Box styles*/
+/*Menus*/
+/*#retail #header #main_nav .dashboard{
+    background: url('../images/menus/dashboard/Home_Icon_64.png') no-repeat;
+}*/
+/*End of Menus*/
