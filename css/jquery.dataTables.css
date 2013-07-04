@@ -31,13 +31,13 @@ table.dataTable td.dataTables_empty {
     text-align: center;
 }
 
-table.dataTable tr.odd { background-color: #cccccc; }
-table.dataTable tr.even { background-color: #d8d8d8; }
+table.dataTable tr.odd { background-color: #DEDEDB; }
+table.dataTable tr.even { background-color: #F9F9F9; }
 
-table.dataTable tr.odd td.sorting_1 { background-color: #BCBCBC; }
+table.dataTable tr.odd td.sorting_1 { background-color: #D4D4D1; }
 table.dataTable tr.odd td.sorting_2 { background-color: #DADCFF; }
 table.dataTable tr.odd td.sorting_3 { background-color: #E0E2FF; }
-table.dataTable tr.even td.sorting_1 { background-color: #CBCBCB; }
+table.dataTable tr.even td.sorting_1 { background-color: #CDCDCD; }
 table.dataTable tr.even td.sorting_2 { background-color: #F2F3FF; }
 table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
 

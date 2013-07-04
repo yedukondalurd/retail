@@ -25,7 +25,7 @@ h1,h2,h3{
 #retail{
     margin: 0 auto;
     width: 1000px;
-    border: 5px solid blue;
+    border: 5px solid #3BB0DB;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -74,7 +74,6 @@ h1,h2,h3{
     border: 1px solid #cccccc;
 }
 #retail #container #heading{
-    height: 30px;
     border-bottom: 1px solid #cccccc;
 }
 #retail #container #heading h3{
@@ -82,6 +81,7 @@ h1,h2,h3{
     padding-top: 5px;
 }
 #retail #container #left_menu{
+    margin-top: 10px;
     width: 185px;
     float: left;
     height: 100%;
@@ -94,11 +94,11 @@ h1,h2,h3{
 
 #retail #container #left_menu ul li a{
     text-decoration: none;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px 10px;
+    background: url("../images/icons/bt_green_center.gif");
 }
 #retail #container #left_menu ul li a:hover{
-    text-decoration: underline;
+    background-position: 25px 30px;
 }
 #retail #container #list_container{
     float: left;
@@ -157,3 +157,54 @@ textarea{
     background: url('../images/menus/dashboard/Home_Icon_64.png') no-repeat;
 }*/
 /*End of Menus*/
+/*Employee Styles*/
+#new-employee #myModal{
+    width: 790px;
+}
+#new-employee #myModal form{
+    height: 350px;
+    overflow-x: auto;
+}
+#new-employee #myModal form input{
+    margin-bottom: 5px;
+}
+#new-employee .reveal-modal{
+    left: 20%;
+}
+#new-employee #myModal .employee-general-information{
+    float: left;
+    width: 340px;
+}
+#new-employee #myModal .employee-login-information{
+    float: right;
+    width: 340px;
+}
+#new-employee #myModal .employee-permissions{
+    float: right;
+    width: 340px;
+}
+#new-employee #myModal label{
+    width: 135px;
+}
+#new-employee #myModal label.error {
+    margin-left: 140px;
+    width: 200px;
+}
+#new-employee #myModal .employee-permissions li{
+    list-style: none;
+}
+#new-employee #myModal .employee-permissions label{
+    float: right;
+}
+#new-employee #myModal .employee-permissions ul{
+    width: 160px;
+}
+#new-employee #myModal .employee-permissions ul ul{
+    margin-left: 15px;
+}
+.dataTables_paginate{
+    margin-top: 0px;
+}
+.dataTables_filter input{
+    height: 30px;
+}

@@ -35,11 +35,12 @@ class MY_Auth extends CI_Controller {
 
     public function setLogin() {
         $this->lang->load('login/login', 'english');
-        //$data['path'] = $this->uri->segment(1);
-        if ($this->input->post('retail_store_username') && $this->input->post('retail_store_password')) {
-            //Assign values to short variable.
-            $username = $this->input->post('retail_store_username');
-            $password = $this->input->post('retail_store_password');
+        //Assign values to short variable.
+        $username = $this->input->post('retail_store_username');
+        $password = $this->input->post('retail_store_password');
+       
+        if ($username && $password) {
+
             //Loding user model..
             $this->load->model('User_model');
             //returning user 

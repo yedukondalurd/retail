@@ -37,7 +37,7 @@
 </div>
 <div style="clear: both;"></div>
 <div id="myModal" class="reveal-modal">
-    <h2>New Item</h2>
+    <h2>New Customer</h2>
     <div id="new-customer">
         <form action="" method="post" row_position="">
             <div>

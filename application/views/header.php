@@ -15,6 +15,13 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery.dataTables.css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery.dataTables.custom.css"/>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/datatable_bootstrap.js"></script>
+        <!--Loading Bootstrap Library
+        http://twitter.github.io/bootstrap/
+        --> 
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>bootstrap/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="<?php echo base_url(); ?>bootstrap/js/bootstrap.min.js"></script>
+         
         <!--Loading Popup Library
         http://zurb.com/playground/reveal-modal-plugin
         -->

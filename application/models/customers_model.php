@@ -26,8 +26,7 @@ Class Customers_model extends My_BaseModel {
     function newCustomer($customerData) {
         $result = $this->db->insert('customers__', $customerData);
         $insert_id = $this->db->insert_id();
-//        $sql = $this->getInsertQuery('customers__', $customerData);
-//        $result = $this->db->query($sql);
+
         if ($result) {
             return $this->getCustomerById($insert_id);
         } else {

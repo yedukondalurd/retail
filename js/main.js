@@ -5,12 +5,15 @@
 $(document).ready(function(){
     /*Binding data Tbles*/
     var oTable = $('#generate_list').dataTable({
-        "bJQueryUI": true,
-        "sPaginationType": "full_numbers"
+        "sDom": "<'row'<'span5'l><'span5'f>r>t<'row'<'span5'i><'span5'p>>",
+        "sPaginationType": "bootstrap"
     });
     /*add button click event*/
     $("#left_menu .addEnqBtn").live('click', function(){
-        
+        $('#edit-password').attr('placeholder','required');
+        $('#edit-confirm-password').attr('placeholder','required');
+        $('#edit-password').addClass('required');
+        $('#edit-confirm-password').addClass('required');
         var getUrl=$(this).attr('href');//Get add button href
         $('#myModal form').attr('action',getUrl);//add to form action 
         $('#myModal form')[0].reset();//Resetting the form data
@@ -68,6 +71,10 @@ $(document).ready(function(){
     });
     /*edit button click event*/
     $("#generate_list tbody tr td .editEnqBtn").live('click', function(){
+        $('#edit-password').attr('placeholder','optional');
+        $('#edit-confirm-password').attr('placeholder','optional');
+        $('#edit-password').removeClass('required');
+        $('#edit-confirm-password').removeClass('required');
         var getUrl=$(this).attr('href');//Get edit button href
         $('#myModal form label[class=error]').hide();//Hide validation error messages
         $('#myModal form').attr('action',getUrl);//add to fom action 
@@ -91,17 +98,38 @@ $(document).ready(function(){
         });
         return false;
     });
+    /*Checking the permissions check boxes*/
+    $('.check-all-permissions').live("click",function(){
+        var module_name=$(this).attr('module-name');
+        $("input[has-module-name="+module_name+"]").attr('checked',this.checked);
+        
+    });
+    $('.check-single-permissions').live("click",function(){
+        $(this).change(function(){
+            var module_name=$(this).attr('has-module-name');
+            if($("input[has-module-name="+module_name+"]").length==$("input[has-module-name="+module_name+"]:checked").length){ 
+                $("input[module-name="+module_name+"]").attr('checked',true);
+            }
+            else{
+                $("input[module-name="+module_name+"]").attr('checked',false);
+            } 
+        });
+    });
 });
 /*tpl for edit data*/
 function formTpl(data){
     //var htmlInputData=[];
     //Generating the form data htmls to edit
-    $('#myModal form input').each(function(){
-        var htmlInputData=$(this).attr('name');
-        $('#myModal form input[name='+htmlInputData+']').val(data[htmlInputData]);
-        $('#myModal form textarea[name='+htmlInputData+']').val(data[htmlInputData]);
+    $.each(data,function(i,value){
+        if(i=='module_id'){
+            var permissions = value.split(',');
+            $.each(permissions,function(j,permissions_id){
+                $("#myModal form input[value='"+parseInt(permissions_id)+"']").click();
+            });
+        }
+        $("#myModal form input[name='"+i+"']").val(value);
+        $("#myModal form textarea[name='"+i+"']").val(value); 
     });
-//$('#myModal form textarea[name=first_name]').val(data.first_name);
 }
 /*noty for notifications*/
 function notify(text,layout,type) {

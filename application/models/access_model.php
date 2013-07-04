@@ -41,11 +41,11 @@ Class Access_model extends My_BaseModel {
         $addLink = '';
         foreach ($result->result_array() as $key => $value) {
             if ($value['module_action'] == 'edit') {
-                $editLink = "<a href='" . $path['edit'] . "' row_id=replaceId class='editEnqBtn'>Edit</a>";
+                $editLink = "<a href='" . $path['edit'] . "' row_id=replaceId class='editEnqBtn'><img src='".  base_url()."images/icons/edit.png' />Edit</a>";
                 continue;
             }
             if ($value['module_action'] == 'delete') {
-                $deleteLink = "<a href='" . $path['delete'] . "' row_id=replaceId class='delEnqBtn'>Delete</a>";
+                $deleteLink = "<a href='" . $path['delete'] . "' row_id=replaceId class='delEnqBtn'><img src='".  base_url()."images/icons/trash.png' />Delete</a>";
                 continue;
             }
             if ($value['module_action'] == 'add') {
