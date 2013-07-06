@@ -43,28 +43,57 @@ h1,h2,h3{
 #retail #header #main_nav{
     float: right;
     width: 800px;
-    margin-top: 10px;
+    margin-top: 19px;
 }
 #retail #header #main_nav ul li{
     float: left;
-    list-style: none;
-    width: 90px;
-    background: url('../images/login_bg.png');
-    border: 1px solid #cccccc;
-    border-radius: 5px 5px 0px 0px;
-    border-bottom: none;
-    height: 50px;
-    text-align: center;
+    position: relative;
+    display: inline;
+    margin-left: -20px;
 }
 #retail #header #main_nav ul li a {
-    display: inline-block;
-    height: 100%;
+    position: relative;
+    width: 110px;
+    height: 29px;
+    display: block;
+    background-image: url('../images/menus/tabs.png');
+    background-position: center center;
+    color: #44403b;
     text-decoration: none;
-    width: 100%;
-    color: #551A8B;
+    font-size: 14px;
+    padding-top: 12px;
+    text-align: left;
+    padding-left: 30px;
+    font-weight: bold;
 }
 #retail #header #main_nav ul li a:hover {
-    text-decoration: underline;
+    background-position: bottom;
+    color: #ffffff;
+}
+#retail #header #main_nav ul li.current-menu a{
+    background-position: top;
+    color: #ffffff;
+}
+#retail #header #main_nav ul li.current-menu{
+   z-index: 100;
+}
+/*#retail #header #main_nav li.dashboard a {
+    background-image: url('../images/menus/tab-home.png');
+}*/
+#retail #header #main_nav li.dashboard {
+    z-index: 100;
+}
+#retail #header #main_nav li.customers {
+    z-index: 99;
+}
+#retail #header #main_nav li.items {
+    z-index: 98;
+}
+#retail #header #main_nav li.employees {
+    z-index: 97;
+}
+#retail #header #main_nav li.sales {
+    z-index: 96;
 }
 /* Container styles*/
 #retail #container{
@@ -207,4 +236,7 @@ textarea{
 }
 .dataTables_filter input{
     height: 30px;
+}
+table.dataTable thead th{
+    min-width: 110px;
 }

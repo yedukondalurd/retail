@@ -21,7 +21,7 @@
         --> 
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>bootstrap/css/bootstrap.min.css"/>
         <script type="text/javascript" src="<?php echo base_url(); ?>bootstrap/js/bootstrap.min.js"></script>
-         
+
         <!--Loading Popup Library
         http://zurb.com/playground/reveal-modal-plugin
         -->
@@ -40,7 +40,15 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>js/main.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/data.table.actions.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css"/>
-
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var path = location.pathname.substring(1);
+                if ( path ){
+                    $('#main_nav ul li').removeClass('current-menu');
+                    $('#main_nav ul li.'+path.toLowerCase()).addClass('current-menu');
+                }
+            });    
+        </script>
     </head>
     <body>
         <div id="retail">
