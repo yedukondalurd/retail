@@ -43,6 +43,9 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 var path = location.pathname.substring(1);
+                if(path.length==0){
+                    path='dashboard';
+                }
                 if ( path ){
                     $('#main_nav ul li').removeClass('current-menu');
                     $('#main_nav ul li.'+path.toLowerCase()).addClass('current-menu');
@@ -61,10 +64,10 @@
                         <div class="float-right">
                             <ul id="user">
                                 <li class="first"><a href="">Account</a></li>
-                                <li class="last"><a href="">Logout</a></li>
+                                <li class="last"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
                             </ul>
                         </div>
-                        
+
                     </div>
                     <div style="clear: both;"></div>
                     <div id="main_nav">

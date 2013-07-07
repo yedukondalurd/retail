@@ -5,7 +5,7 @@
 $(document).ready(function(){
     /*Binding data Tbles*/
     var oTable = $('#generate_list').dataTable({
-        "sDom": "<'row'<'span5'l><'span5'f>r>t<'row'<'span5'i><'span5'p>>",
+        "sDom": "<'row'<'span7'l><'span5'f>r>t<'row'<'span7'i><'span5'p>>",
         "sPaginationType": "bootstrap"
     });
     /*add button click event*/

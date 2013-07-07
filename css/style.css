@@ -57,6 +57,13 @@ ul#user{
 ul#user li{
     list-style: none;
 }
+ul#user li a{
+    color: #000000;
+}
+ul#user li a:hover{
+    color: #0088CC;
+}
+
 ul#user li.first {
     border-left: medium none;
 }
@@ -108,7 +115,10 @@ ul#user li.first {
     padding-left: 30px;
     font-weight: bold;
 }
-#retail #header #main_nav ul li a:hover {
+#retail #header #main_nav ul li a:hover, 
+#retail #header #main_nav ul li a:active, 
+#retail #header #main_nav ul li a:focus
+{
     background-position: bottom;
     color: #ffffff;
 }
@@ -143,10 +153,10 @@ ul#user li.first {
     /*    height: 500px;*/
     margin: 10px;
     /*    border: 1px solid #cccccc;*/
-    background: #ffffff;
+    /*    background: #ffffff;*/
 }
 #retail #container #heading{
-    border-bottom: 1px solid #cccccc;
+    /*    border-bottom: 1px solid #cccccc;*/
     background: #577295;
     color: #ffffff;
 }
@@ -155,11 +165,14 @@ ul#user li.first {
     padding-top: 5px;
 }
 #retail #container #left_menu{
-    margin-top: 10px;
-    width: 185px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 180px;
     float: left;
     height: 100%;
-    border-right: 1px solid #cccccc;
+    padding-top: 15px;
+    background: #FFFFFF;
+    /*    border-right: 1px solid #cccccc;*/
 }
 #retail #container #left_menu ul{
     margin-left: 5px;
@@ -178,7 +191,9 @@ ul#user li.first {
 }
 #retail #container #list_container{
     float: left;
-    width: 792px;
+    margin-top: 5px;
+    background: #ffffff;
+    width: 944px;
 }
 #generate_list th{
     text-align: left;
@@ -286,4 +301,32 @@ textarea{
 }
 table.dataTable thead th{
     min-width: 110px;
+}
+.dataTables_wrapper{
+    overflow: hidden;
+}
+.dataTables_wrapper .row:first-child {
+    background: #577295;
+    color: #ffffff;
+    padding-top: 6px;
+}
+.dataTables_wrapper .row{
+    margin-left: 0px;
+}
+.dataTables_wrapper select, 
+.dataTables_wrapper textarea, 
+.dataTables_wrapper input[type="text"], 
+.dataTables_wrapper input[type="password"], 
+.dataTables_wrapper input[type="datetime"], 
+.dataTables_wrapper input[type="datetime-local"], 
+.dataTables_wrapper input[type="date"], input[type="month"], 
+.dataTables_wrapper input[type="time"], input[type="week"], 
+.dataTables_wrapper input[type="number"], input[type="email"], 
+.dataTables_wrapper input[type="url"], input[type="search"], 
+.dataTables_wrapper input[type="tel"], input[type="color"], 
+.dataTables_wrapper .uneditable-input{
+    margin-bottom: 0px;
+}
+.dataTables_wrapper [class*="span"]{
+    margin-left: 8px;
 }
