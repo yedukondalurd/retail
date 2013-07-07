@@ -51,15 +51,26 @@
         </script>
     </head>
     <body>
-        <div id="retail">
-            <div id="header">
-                <div id="store_logo">
-                    <img src="<?php echo base_url(); ?>" alt="Store Logo"/>
+        <div>
+            <div id="retail">
+                <div id="header">
+                    <div id="store_logo">
+                        <div class="float-left">
+                            <img src="<?php echo base_url(); ?>images/logo.png" alt="Store Logo"/>
+                        </div>
+                        <div class="float-right">
+                            <ul id="user">
+                                <li class="first"><a href="">Account</a></li>
+                                <li class="last"><a href="">Logout</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div id="main_nav">
+                        <ul>
+                            <?php echo $menuLinks; ?>
+                        </ul>
+                    </div>
+                    <div style="clear: both;"></div>
                 </div>
-                <div id="main_nav">
-                    <ul>
-                        <?php echo $menuLinks; ?>
-                    </ul>
-                </div>
-                <div style="clear: both;"></div>
-            </div>
